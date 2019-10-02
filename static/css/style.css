@@ -1,0 +1,149 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: radial-gradient(#f4f3ef, #98c6c3);
+    overflow: hidden;
+}
+
+ul {
+    display: none;
+}
+
+.player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 260px;
+    width: 260px;
+    margin: -130px 0 0 -130px;
+    font-family: 'Roboto', sans-serif;
+    color: #f4f3ef;
+    cursor: default;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header, .controls {
+    background: rgba(0, 0, 0, 0.8);
+    transition: all ease-out 0.3s;
+}
+
+.header {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.header.show,
+.player:hover .header {
+    top: 0;
+}
+
+.artist, .title {
+    line-height: 15px;
+    text-align: center;
+}
+
+.artist {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.artist a {
+    color: #f4f3ef;
+}
+
+.title {
+    font-size: 11px;
+    font-weight: 300;
+}
+
+.controls {
+    position: absolute;
+    bottom: -40px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.player:hover .controls {
+    bottom: 0;
+}
+
+.controls button {
+    height: 30px;
+    width: 30px;
+    border: 0;
+    cursor: pointer;
+    font-size: 100%;
+    color: #f4f3ef;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 0 rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(#98c6c3, #77b4b0);
+    transition: all .1s;
+}
+
+.controls button:active {
+    background: linear-gradient(#77b4b0, #98c6c3);
+}
+
+.controls button:focus {
+    outline: 0;
+}
+
+.controls button.transparent {
+    background: transparent;
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.controls button.active {
+    color: #f4f3ef;
+}
+
+.controls button.loop {
+    float: left;
+}
+
+.controls button.shuffle {
+    float: right;
+}
+
+.progressbar {
+    opacity: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(#467f7b, #4f8f8b, #467f7b);
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.player.playing .progressbar {
+    opacity: 1;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #f4f3ef;
+    box-shadow: inset 0 0 1px #d5d1c2;
+}

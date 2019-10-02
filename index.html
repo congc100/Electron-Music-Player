@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css'>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="player">
+        <audio id="id-audio-player" src="audios/1.mp3"></audio>
+        <ul id="id-ul-song-list"></ul>
+        <div class="cover">
+            <div class="header">
+                <div class="artist"></div>
+                <div class="title"></div>
+            </div>
+            <div class="controls">
+                <button class="transparent loop fi-loop"></button>
+                <span>
+                    <button class="prev fi-previous"></button>
+                    <button class="play fi-play"></button>
+                    <button class="stop fi-stop"></button>
+                    <button class="next fi-next"></button>
+                </span>
+                <button class="transparent shuffle fi-shuffle"></button>
+                <div class="progressbar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.nodeRequire = require
+    delete window.exports
+    delete window.module
+</script>
+<script src="static/lib/jquery.js"></script>
+<script src="static/js/util.js"></script>
+<script src="static/js/audio.js"></script>
+<script src="static/js/player.js"></script>
+<script src="static/js/progress.js"></script>
+<script src="static/js/index.js"></script>
+</html>

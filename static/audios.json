@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Music 1",
+        "artist": "Taylor Swift",
+        "audio": "audios/1.mp3",
+        "cover": "covers/1.jpg"
+    },
+    {
+        "title": "Music 2",
+        "artist": "Taylor Swift",
+        "audio": "audios/2.mp3",
+        "cover": "covers/2.jpg"
+    },
+    {
+        "title": "Music 3",
+        "artist": "Katy Perry",
+        "audio": "audios/3.mp3",
+        "cover": "covers/3.jpg"
+    }
+]
